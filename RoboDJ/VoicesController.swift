@@ -30,7 +30,15 @@ class VoicesController: UITableViewController {
         let v = voices[indexPath.row]
         cell.textLabel?.text = v.langName
         cell.detailTextLabel?.text = v.countryName
+        if selectedIndex == indexPath.row {
+            cell.accessoryType = .Checkmark
+        }
         return cell
+    }
+    
+    override func tableView(tv: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        Settings.selectedVoice = voices[indexPath.row]        
+        navigationController?.popViewControllerAnimated(true)
     }
 }
 
