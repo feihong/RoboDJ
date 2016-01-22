@@ -19,6 +19,8 @@
 		A7FBA6381C51E06F00D519FF /* PlayFromController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FBA6371C51E06F00D519FF /* PlayFromController.swift */; };
 		A7FBA63B1C51F4F100D519FF /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FBA63A1C51F4F100D519FF /* Playlist.swift */; };
 		A7FBA63E1C52A54800D519FF /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FBA63D1C52A54800D519FF /* Settings.swift */; };
+		A7FBA6401C52D4EA00D519FF /* VoicesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FBA63F1C52D4EA00D519FF /* VoicesController.swift */; };
+		A7FBA6421C52D84100D519FF /* Voice.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FBA6411C52D84100D519FF /* Voice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		A7FBA6371C51E06F00D519FF /* PlayFromController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayFromController.swift; sourceTree = "<group>"; };
 		A7FBA63A1C51F4F100D519FF /* Playlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
 		A7FBA63D1C52A54800D519FF /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		A7FBA63F1C52D4EA00D519FF /* VoicesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoicesController.swift; sourceTree = "<group>"; };
+		A7FBA6411C52D84100D519FF /* Voice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Voice.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,7 @@
 				A7FBA6051C51D15900D519FF /* AppDelegate.swift */,
 				A7FBA6331C51D59000D519FF /* OptionsController.swift */,
 				A7FBA6371C51E06F00D519FF /* PlayFromController.swift */,
+				A7FBA63F1C52D4EA00D519FF /* VoicesController.swift */,
 				A7FBA6071C51D15900D519FF /* ViewController.swift */,
 				A7FBA6351C51DB4B00D519FF /* helpers.swift */,
 				A7FBA6391C51F4D500D519FF /* Models */,
@@ -144,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				A7FBA63A1C51F4F100D519FF /* Playlist.swift */,
+				A7FBA6411C52D84100D519FF /* Voice.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -291,8 +297,10 @@
 				A7FBA6341C51D59000D519FF /* OptionsController.swift in Sources */,
 				A7FBA6061C51D15900D519FF /* AppDelegate.swift in Sources */,
 				A7FBA6381C51E06F00D519FF /* PlayFromController.swift in Sources */,
+				A7FBA6421C52D84100D519FF /* Voice.swift in Sources */,
 				A7FBA63E1C52A54800D519FF /* Settings.swift in Sources */,
 				A7FBA6361C51DB4B00D519FF /* helpers.swift in Sources */,
+				A7FBA6401C52D4EA00D519FF /* VoicesController.swift in Sources */,
 				A7FBA63B1C51F4F100D519FF /* Playlist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -3,7 +3,7 @@ import UIKit
 
 class OptionsController: UITableViewController {
     @IBOutlet var playlistLabel: UILabel!
-    @IBOutlet var languageLabel: UILabel!
+    @IBOutlet var voiceLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -14,6 +14,9 @@ class OptionsController: UITableViewController {
         
         playlistLabel.text = (Settings.selectedPlaylist == nil) ?
             "All Music" : Settings.selectedPlaylist!.name
+        
+        let v = Settings.selectedVoice
+        voiceLabel.text = "\(v.langName) (\(v.countryName))"
     }
     
 
