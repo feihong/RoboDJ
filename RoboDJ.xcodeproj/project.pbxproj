@@ -1,0 +1,541 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A7FBA6061C51D15900D519FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FBA6051C51D15900D519FF /* AppDelegate.swift */; };
+		A7FBA6081C51D15900D519FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FBA6071C51D15900D519FF /* ViewController.swift */; };
+		A7FBA60B1C51D15900D519FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7FBA6091C51D15900D519FF /* Main.storyboard */; };
+		A7FBA60D1C51D15900D519FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7FBA60C1C51D15900D519FF /* Assets.xcassets */; };
+		A7FBA6101C51D15900D519FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7FBA60E1C51D15900D519FF /* LaunchScreen.storyboard */; };
+		A7FBA61B1C51D15900D519FF /* RoboDJTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FBA61A1C51D15900D519FF /* RoboDJTests.swift */; };
+		A7FBA6261C51D15900D519FF /* RoboDJUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FBA6251C51D15900D519FF /* RoboDJUITests.swift */; };
+		A7FBA6341C51D59000D519FF /* OptionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FBA6331C51D59000D519FF /* OptionsController.swift */; };
+		A7FBA6361C51DB4B00D519FF /* helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FBA6351C51DB4B00D519FF /* helpers.swift */; };
+		A7FBA6381C51E06F00D519FF /* PlayFromController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FBA6371C51E06F00D519FF /* PlayFromController.swift */; };
+		A7FBA63B1C51F4F100D519FF /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FBA63A1C51F4F100D519FF /* Playlist.swift */; };
+		A7FBA63E1C52A54800D519FF /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FBA63D1C52A54800D519FF /* Settings.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A7FBA6171C51D15900D519FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7FBA5FA1C51D15800D519FF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A7FBA6011C51D15800D519FF;
+			remoteInfo = RoboDJ;
+		};
+		A7FBA6221C51D15900D519FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A7FBA5FA1C51D15800D519FF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A7FBA6011C51D15800D519FF;
+			remoteInfo = RoboDJ;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A7FBA6021C51D15800D519FF /* RoboDJ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoboDJ.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7FBA6051C51D15900D519FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A7FBA6071C51D15900D519FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A7FBA60A1C51D15900D519FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A7FBA60C1C51D15900D519FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A7FBA60F1C51D15900D519FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A7FBA6111C51D15900D519FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7FBA6161C51D15900D519FF /* RoboDJTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoboDJTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7FBA61A1C51D15900D519FF /* RoboDJTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoboDJTests.swift; sourceTree = "<group>"; };
+		A7FBA61C1C51D15900D519FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7FBA6211C51D15900D519FF /* RoboDJUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoboDJUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7FBA6251C51D15900D519FF /* RoboDJUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoboDJUITests.swift; sourceTree = "<group>"; };
+		A7FBA6271C51D15900D519FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7FBA6331C51D59000D519FF /* OptionsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionsController.swift; sourceTree = "<group>"; };
+		A7FBA6351C51DB4B00D519FF /* helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = helpers.swift; sourceTree = "<group>"; };
+		A7FBA6371C51E06F00D519FF /* PlayFromController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayFromController.swift; sourceTree = "<group>"; };
+		A7FBA63A1C51F4F100D519FF /* Playlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
+		A7FBA63D1C52A54800D519FF /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A7FBA5FF1C51D15800D519FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7FBA6131C51D15900D519FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7FBA61E1C51D15900D519FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A7FBA5F91C51D15800D519FF = {
+			isa = PBXGroup;
+			children = (
+				A7FBA6041C51D15800D519FF /* RoboDJ */,
+				A7FBA6191C51D15900D519FF /* RoboDJTests */,
+				A7FBA6241C51D15900D519FF /* RoboDJUITests */,
+				A7FBA6031C51D15800D519FF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A7FBA6031C51D15800D519FF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A7FBA6021C51D15800D519FF /* RoboDJ.app */,
+				A7FBA6161C51D15900D519FF /* RoboDJTests.xctest */,
+				A7FBA6211C51D15900D519FF /* RoboDJUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A7FBA6041C51D15800D519FF /* RoboDJ */ = {
+			isa = PBXGroup;
+			children = (
+				A7FBA6051C51D15900D519FF /* AppDelegate.swift */,
+				A7FBA6331C51D59000D519FF /* OptionsController.swift */,
+				A7FBA6371C51E06F00D519FF /* PlayFromController.swift */,
+				A7FBA6071C51D15900D519FF /* ViewController.swift */,
+				A7FBA6351C51DB4B00D519FF /* helpers.swift */,
+				A7FBA6391C51F4D500D519FF /* Models */,
+				A7FBA63C1C52A53000D519FF /* Helpers */,
+				A7FBA6091C51D15900D519FF /* Main.storyboard */,
+				A7FBA60C1C51D15900D519FF /* Assets.xcassets */,
+				A7FBA60E1C51D15900D519FF /* LaunchScreen.storyboard */,
+				A7FBA6111C51D15900D519FF /* Info.plist */,
+			);
+			path = RoboDJ;
+			sourceTree = "<group>";
+		};
+		A7FBA6191C51D15900D519FF /* RoboDJTests */ = {
+			isa = PBXGroup;
+			children = (
+				A7FBA61A1C51D15900D519FF /* RoboDJTests.swift */,
+				A7FBA61C1C51D15900D519FF /* Info.plist */,
+			);
+			path = RoboDJTests;
+			sourceTree = "<group>";
+		};
+		A7FBA6241C51D15900D519FF /* RoboDJUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A7FBA6251C51D15900D519FF /* RoboDJUITests.swift */,
+				A7FBA6271C51D15900D519FF /* Info.plist */,
+			);
+			path = RoboDJUITests;
+			sourceTree = "<group>";
+		};
+		A7FBA6391C51F4D500D519FF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A7FBA63A1C51F4F100D519FF /* Playlist.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		A7FBA63C1C52A53000D519FF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A7FBA63D1C52A54800D519FF /* Settings.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A7FBA6011C51D15800D519FF /* RoboDJ */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7FBA62A1C51D15900D519FF /* Build configuration list for PBXNativeTarget "RoboDJ" */;
+			buildPhases = (
+				A7FBA5FE1C51D15800D519FF /* Sources */,
+				A7FBA5FF1C51D15800D519FF /* Frameworks */,
+				A7FBA6001C51D15800D519FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RoboDJ;
+			productName = RoboDJ;
+			productReference = A7FBA6021C51D15800D519FF /* RoboDJ.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A7FBA6151C51D15900D519FF /* RoboDJTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7FBA62D1C51D15900D519FF /* Build configuration list for PBXNativeTarget "RoboDJTests" */;
+			buildPhases = (
+				A7FBA6121C51D15900D519FF /* Sources */,
+				A7FBA6131C51D15900D519FF /* Frameworks */,
+				A7FBA6141C51D15900D519FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A7FBA6181C51D15900D519FF /* PBXTargetDependency */,
+			);
+			name = RoboDJTests;
+			productName = RoboDJTests;
+			productReference = A7FBA6161C51D15900D519FF /* RoboDJTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A7FBA6201C51D15900D519FF /* RoboDJUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7FBA6301C51D15900D519FF /* Build configuration list for PBXNativeTarget "RoboDJUITests" */;
+			buildPhases = (
+				A7FBA61D1C51D15900D519FF /* Sources */,
+				A7FBA61E1C51D15900D519FF /* Frameworks */,
+				A7FBA61F1C51D15900D519FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A7FBA6231C51D15900D519FF /* PBXTargetDependency */,
+			);
+			name = RoboDJUITests;
+			productName = RoboDJUITests;
+			productReference = A7FBA6211C51D15900D519FF /* RoboDJUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A7FBA5FA1C51D15800D519FF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Feihong Hsu";
+				TargetAttributes = {
+					A7FBA6011C51D15800D519FF = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					A7FBA6151C51D15900D519FF = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = A7FBA6011C51D15800D519FF;
+					};
+					A7FBA6201C51D15900D519FF = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = A7FBA6011C51D15800D519FF;
+					};
+				};
+			};
+			buildConfigurationList = A7FBA5FD1C51D15800D519FF /* Build configuration list for PBXProject "RoboDJ" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A7FBA5F91C51D15800D519FF;
+			productRefGroup = A7FBA6031C51D15800D519FF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A7FBA6011C51D15800D519FF /* RoboDJ */,
+				A7FBA6151C51D15900D519FF /* RoboDJTests */,
+				A7FBA6201C51D15900D519FF /* RoboDJUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A7FBA6001C51D15800D519FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7FBA6101C51D15900D519FF /* LaunchScreen.storyboard in Resources */,
+				A7FBA60D1C51D15900D519FF /* Assets.xcassets in Resources */,
+				A7FBA60B1C51D15900D519FF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7FBA6141C51D15900D519FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7FBA61F1C51D15900D519FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A7FBA5FE1C51D15800D519FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7FBA6081C51D15900D519FF /* ViewController.swift in Sources */,
+				A7FBA6341C51D59000D519FF /* OptionsController.swift in Sources */,
+				A7FBA6061C51D15900D519FF /* AppDelegate.swift in Sources */,
+				A7FBA6381C51E06F00D519FF /* PlayFromController.swift in Sources */,
+				A7FBA63E1C52A54800D519FF /* Settings.swift in Sources */,
+				A7FBA6361C51DB4B00D519FF /* helpers.swift in Sources */,
+				A7FBA63B1C51F4F100D519FF /* Playlist.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7FBA6121C51D15900D519FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7FBA61B1C51D15900D519FF /* RoboDJTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7FBA61D1C51D15900D519FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7FBA6261C51D15900D519FF /* RoboDJUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A7FBA6181C51D15900D519FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A7FBA6011C51D15800D519FF /* RoboDJ */;
+			targetProxy = A7FBA6171C51D15900D519FF /* PBXContainerItemProxy */;
+		};
+		A7FBA6231C51D15900D519FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A7FBA6011C51D15800D519FF /* RoboDJ */;
+			targetProxy = A7FBA6221C51D15900D519FF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A7FBA6091C51D15900D519FF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A7FBA60A1C51D15900D519FF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A7FBA60E1C51D15900D519FF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A7FBA60F1C51D15900D519FF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A7FBA6281C51D15900D519FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A7FBA6291C51D15900D519FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A7FBA62B1C51D15900D519FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RoboDJ/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.feihong.RoboDJ;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A7FBA62C1C51D15900D519FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RoboDJ/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.feihong.RoboDJ;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A7FBA62E1C51D15900D519FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RoboDJTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.feihong.RoboDJTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RoboDJ.app/RoboDJ";
+			};
+			name = Debug;
+		};
+		A7FBA62F1C51D15900D519FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RoboDJTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.feihong.RoboDJTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RoboDJ.app/RoboDJ";
+			};
+			name = Release;
+		};
+		A7FBA6311C51D15900D519FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = RoboDJUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.feihong.RoboDJUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = RoboDJ;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		A7FBA6321C51D15900D519FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = RoboDJUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.feihong.RoboDJUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = RoboDJ;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A7FBA5FD1C51D15800D519FF /* Build configuration list for PBXProject "RoboDJ" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7FBA6281C51D15900D519FF /* Debug */,
+				A7FBA6291C51D15900D519FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7FBA62A1C51D15900D519FF /* Build configuration list for PBXNativeTarget "RoboDJ" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7FBA62B1C51D15900D519FF /* Debug */,
+				A7FBA62C1C51D15900D519FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A7FBA62D1C51D15900D519FF /* Build configuration list for PBXNativeTarget "RoboDJTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7FBA62E1C51D15900D519FF /* Debug */,
+				A7FBA62F1C51D15900D519FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A7FBA6301C51D15900D519FF /* Build configuration list for PBXNativeTarget "RoboDJUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7FBA6311C51D15900D519FF /* Debug */,
+				A7FBA6321C51D15900D519FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A7FBA5FA1C51D15800D519FF /* Project object */;
+}
