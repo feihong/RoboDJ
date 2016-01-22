@@ -11,10 +11,9 @@ struct PlaylistStub : Playlist {
     var id: UInt64 = 0
     var name: String = ""
     var count: Int = 0
-    static var counter: UInt64 = 0
     
-    init(name: String, count: Int) {
-        self.id = ++PlaylistStub.counter
+    init(id: UInt64, name: String, count: Int) {
+        self.id = id
         self.name = name
         self.count = count
     }
