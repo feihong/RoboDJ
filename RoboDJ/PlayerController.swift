@@ -5,11 +5,12 @@ import MediaPlayer
 class PlayerController: UIViewController {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var artistLabel: UILabel!
-    @IBOutlet var playButton: UIButton!
+    @IBOutlet var playPauseButton: UIButton!
     @IBOutlet var prevButton: UIButton!
     @IBOutlet var nextButton: UIButton!
 
     var tracks: [Track] = []
+    var currentIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()

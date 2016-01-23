@@ -10,7 +10,11 @@ struct Track {
         return item.valueForProperty(MPMediaItemPropertyArtist) as! String
     }
     var lastPlayedDate: NSDate {
-        return item.valueForProperty(MPMediaItemPropertyLastPlayedDate) as! NSDate
+        if let obj = item.valueForProperty(MPMediaItemPropertyLastPlayedDate) {
+            return obj as! NSDate
+        } else {
+            return NSDate(timeIntervalSince1970: 0)
+        }
     }
     
     init(item: MPMediaItem) {

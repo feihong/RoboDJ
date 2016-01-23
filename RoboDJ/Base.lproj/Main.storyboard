@@ -86,7 +86,7 @@
                     <connections>
                         <outlet property="artistLabel" destination="gka-GK-Uw6" id="gfW-bC-CBP"/>
                         <outlet property="nextButton" destination="JxC-3J-ULQ" id="iAm-sA-heD"/>
-                        <outlet property="playButton" destination="JX4-vs-jW4" id="uDB-9J-ShU"/>
+                        <outlet property="playPauseButton" destination="JX4-vs-jW4" id="aoI-0c-BBB"/>
                         <outlet property="prevButton" destination="VIo-dP-eFd" id="I7F-db-wel"/>
                         <outlet property="titleLabel" destination="XnW-sc-uab" id="3Pr-zn-YS9"/>
                     </connections>
