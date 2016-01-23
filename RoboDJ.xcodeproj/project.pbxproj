@@ -120,7 +120,6 @@
 				A7FBA6331C51D59000D519FF /* OptionsController.swift */,
 				A7FBA6371C51E06F00D519FF /* PlayFromController.swift */,
 				A7FBA63F1C52D4EA00D519FF /* VoicesController.swift */,
-				A7FBA6351C51DB4B00D519FF /* helpers.swift */,
 				A7FBA6391C51F4D500D519FF /* Models */,
 				A7FBA63C1C52A53000D519FF /* Helpers */,
 				A7FBA6091C51D15900D519FF /* Main.storyboard */,
@@ -164,6 +163,7 @@
 			children = (
 				A7FBA63D1C52A54800D519FF /* Settings.swift */,
 				A7FBA6451C5334C000D519FF /* Stubs.swift */,
+				A7FBA6351C51DB4B00D519FF /* helpers.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";

@@ -9,6 +9,9 @@ struct Track {
     var artist: String {
         return item.valueForProperty(MPMediaItemPropertyArtist) as! String
     }
+    var lastPlayedDate: NSDate {
+        return item.valueForProperty(MPMediaItemPropertyLastPlayedDate) as! NSDate
+    }
     
     init(item: MPMediaItem) {
         self.item = item

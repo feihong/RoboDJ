@@ -5,3 +5,36 @@
 Regarding the persistence of MPMediaItemPropertyPersistentID:
 
 > The value of the MPMediaItemPropertyPersistentID identifier persists across application launches and across syncs that do not change the sync status of the media item. The value is not guaranteed to persist across a sync/unsync/sync cycle.
+
+[Retrieving songs and sorting them by last played date](http://stackoverflow.com/questions/14651641/retreive-list-of-songs-ordered-by-last-play-time-in-ios)
+
+---
+
+This is a very useful function, but I don't think I'll end up using it in this project:
+
+```swift
+func setTableViewBelowStatusBar(tableView: UITableView) {
+    // Get the height of the status bar
+    let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.height
+
+    let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
+    tableView.contentInset = insets
+    tableView.scrollIndicatorInsets = insets
+}
+```
+
+---
+
+Should there be a MediaSource enumeration like this?
+
+```swift
+enum MediaSource {
+    case AllMusic
+    case AllPodcasts
+    case MusicPlaylist(Playlist)
+}
+```
+
+---
+
+Next: Load up songs

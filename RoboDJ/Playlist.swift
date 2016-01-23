@@ -5,20 +5,21 @@ protocol Playlist {
     var id: UInt64 {get}
     var name: String {get}
     var count: Int {get}
-    var lastPlayedDate: NSDate {get}
+    func getTracks() -> [Track]
 }
 
 struct PlaylistStub : Playlist {
     var id: UInt64 = 0
     var name: String = ""
     var count: Int = 0
-    var lastPlayedDate = NSDate()
     
     init(id: UInt64, name: String, count: Int) {
         self.id = id
         self.name = name
         self.count = count
     }
+    
+    func getTracks() -> [Track] { return [] }
 }
 
 struct MediaPlaylist : Playlist {
@@ -31,16 +32,14 @@ struct MediaPlaylist : Playlist {
         return item.valueForProperty(MPMediaPlaylistPropertyName) as! String
     }
     var count: Int { return item.count }
-    var lastPlayedDate: NSDate {
-        return item.valueForProperty(MPMediaItemPropertyLastPlayedDate) as! NSDate
-    }
+
     
     init(item: MPMediaItemCollection) {
         self.item = item
     }
     
-    func getTracks() {
-        
+    func getTracks() -> [Track] {
+        return getSortedTracks(item.items)
     }
     
     static func getPlaylists() -> [Playlist] {
