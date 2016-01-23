@@ -18,10 +18,4 @@ class OptionsController: UITableViewController {
         let v = Settings.selectedVoice
         voiceLabel.text = "\(v.langName) (\(v.countryName))"
     }
-    
-
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
 }
