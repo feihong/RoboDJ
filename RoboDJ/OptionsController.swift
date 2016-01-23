@@ -18,4 +18,8 @@ class OptionsController: UITableViewController {
         let v = Settings.selectedVoice
         voiceLabel.text = "\(v.langName) (\(v.countryName))"
     }
+    
+    @IBAction func dismiss(sender: UIBarButtonItem) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 }

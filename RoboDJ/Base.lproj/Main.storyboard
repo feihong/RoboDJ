@@ -102,7 +102,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Options" id="cNi-bW-1mD">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="q5U-qS-HEN"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="q5U-qS-HEN">
+                            <connections>
+                                <action selector="dismiss:" destination="3QJ-Az-wvk" id="oa0-AB-elz"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="playlistLabel" destination="PqE-ZF-y7T" id="Vgw-Cd-Zkc"/>
