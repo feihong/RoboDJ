@@ -17,6 +17,10 @@ class PlayerController: UIViewController {
         
         tracks = Settings.selectedPlaylist.getTracks()
         
+//        for track in tracks {
+//            print("\(track.title) | \(track.lastPlayedDate)")
+//        }
+        
         if tracks.count > 0 {
             let track = tracks[0]
             titleLabel.text = track.title

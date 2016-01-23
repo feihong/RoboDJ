@@ -8,10 +8,13 @@ private let SelectedVoice = "SelectedVoice"
 
 
 class Settings {
-    // Set to true if you are running on the simulator and you want to load stub
-    // playlists.
+    // Load stub data if running in simulator.
+    #if (arch(i386) || arch(x86_64)) && os(iOS)
     static var loadStubData = true
-    
+    #else
+    static var loadStubData = false
+    #endif
+
     static var selectedPlaylist: Playlist = AllMusicPlaylist() {
         didSet {
             // Store string if no playlist is selected; otherwise store the id

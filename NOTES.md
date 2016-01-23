@@ -10,6 +10,8 @@ Regarding the persistence of MPMediaItemPropertyPersistentID:
 
 [Retrieving songs and sorting them by last played date](http://stackoverflow.com/questions/14651641/retreive-list-of-songs-ordered-by-last-play-time-in-ios)
 
+[Detect if app is being built for device or simulator](http://stackoverflow.com/questions/24869481/detect-if-app-is-being-built-for-device-or-simulator-in-swift)
+
 ---
 
 This is a very useful function, but I don't think I'll end up using it in this project:
