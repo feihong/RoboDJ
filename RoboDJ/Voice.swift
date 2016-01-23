@@ -10,7 +10,8 @@ struct Voice {
     let countryName: String
     
     static func getVoices() -> [Voice] {
-        return AVSpeechSynthesisVoice.speechVoices().map { Voice(id: $0.language) }
+        let result = AVSpeechSynthesisVoice.speechVoices().map { Voice(id: $0.language) }
+        return result.sort { $0.langName < $1.langName }
     }
     
     init(id: String) {
