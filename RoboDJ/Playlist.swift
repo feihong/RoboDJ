@@ -5,12 +5,14 @@ protocol Playlist {
     var id: UInt64 {get}
     var name: String {get}
     var count: Int {get}
+    var lastPlayedDate: NSDate {get}
 }
 
 struct PlaylistStub : Playlist {
     var id: UInt64 = 0
     var name: String = ""
     var count: Int = 0
+    var lastPlayedDate = NSDate()
     
     init(id: UInt64, name: String, count: Int) {
         self.id = id
@@ -29,9 +31,16 @@ struct MediaPlaylist : Playlist {
         return item.valueForProperty(MPMediaPlaylistPropertyName) as! String
     }
     var count: Int { return item.count }
+    var lastPlayedDate: NSDate {
+        return item.valueForProperty(MPMediaItemPropertyLastPlayedDate) as! NSDate
+    }
     
     init(item: MPMediaItemCollection) {
         self.item = item
+    }
+    
+    func getTracks() {
+        
     }
     
     static func getPlaylists() -> [Playlist] {

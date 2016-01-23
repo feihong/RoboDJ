@@ -8,6 +8,8 @@ let SelectedVoice = "SelectedVoice"
 
 
 class Settings {
+    // Set to true if you are running on the simulator and you want to load stub
+    // playlists.
     static var loadStubData = true
     
     static var selectedPlaylist: Playlist? = nil {
