@@ -16,11 +16,11 @@ class PlayFromController: UITableViewController {
         }
         
         // Set selectedIndex.
-        if Settings.selectedPlaylist == nil {
+        if Settings.selectedPlaylist is AllMusicPlaylist {
             selectedIndex = -1
         } else {
             for i in 0..<playlists.count {
-                if playlists[i].id == Settings.selectedPlaylist!.id {
+                if playlists[i].id == Settings.selectedPlaylist.id {
                     selectedIndex = i
                     break
                 }
@@ -69,11 +69,9 @@ class PlayFromController: UITableViewController {
     
     override func tableView(tv: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.section == 0 {
-            selectedIndex = -1
-            Settings.selectedPlaylist = nil
+            Settings.selectedPlaylist = AllMusicPlaylist()
         } else {
-            selectedIndex = indexPath.row
-            Settings.selectedPlaylist = playlists[selectedIndex]
+            Settings.selectedPlaylist = playlists[indexPath.row]
         }
         navigationController?.popViewControllerAnimated(true)
     }

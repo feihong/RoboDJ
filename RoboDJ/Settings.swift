@@ -1,10 +1,10 @@
 import Foundation
 
 
-let defaults = NSUserDefaults.standardUserDefaults()
+private let defaults = NSUserDefaults.standardUserDefaults()
 
-let SelectedPlaylist = "SelectedPlaylist"
-let SelectedVoice = "SelectedVoice"
+private let SelectedPlaylist = "SelectedPlaylist"
+private let SelectedVoice = "SelectedVoice"
 
 
 class Settings {
@@ -12,14 +12,13 @@ class Settings {
     // playlists.
     static var loadStubData = true
     
-    static var selectedPlaylist: Playlist? = nil {
+    static var selectedPlaylist: Playlist = AllMusicPlaylist() {
         didSet {
-            let value: AnyObject
-            if let p = selectedPlaylist {
-                value = NSNumber.init(unsignedLongLong: p.id)
-            } else {
-                value = "allmusic"
-            }
+            // Store string if no playlist is selected; otherwise store the id
+            // of the selected playlist. We do this because NSNull cannot be
+            // stored inside NSUserDefaults.
+            let value: AnyObject = (selectedPlaylist is AllMusicPlaylist) ?
+                "AllMusic" : NSNumber(unsignedLongLong: selectedPlaylist.id)
             defaults.setObject(value, forKey: SelectedPlaylist)
         }
     }
@@ -32,13 +31,13 @@ class Settings {
     static func initValues() {
         if let val = defaults.objectForKey(SelectedPlaylist) {
             if val is NSString {
-                selectedPlaylist = nil
+                selectedPlaylist = AllMusicPlaylist()
             } else {
                 let number = val as! NSNumber
                 if loadStubData {
                     selectedPlaylist = Stubs.playlists[number.integerValue]
                 } else {
-                    selectedPlaylist = MediaPlaylist.getPlaylist(number)
+                    selectedPlaylist = MediaPlaylist.getPlaylist(number)!
                 }
             }
         }
@@ -49,7 +48,7 @@ class Settings {
     
     static func registerDefaults() {
         defaults.registerDefaults([
-            SelectedPlaylist: "allmusic",
+            SelectedPlaylist: "AllMusic",
             SelectedVoice: "en-US",
         ])
     }

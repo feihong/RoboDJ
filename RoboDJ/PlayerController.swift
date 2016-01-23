@@ -15,11 +15,7 @@ class PlayerController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let playlist = Settings.selectedPlaylist {
-            tracks = playlist.getTracks()
-        } else {
-            tracks = getAllTracks()
-        }
+        tracks = Settings.selectedPlaylist.getTracks()
         
         if tracks.count > 0 {
             let track = tracks[0]
@@ -27,10 +23,4 @@ class PlayerController: UIViewController {
             artistLabel.text = track.artist
         }
     }
-}
-
-func getAllTracks() -> [Track] {
-    let query = MPMediaQuery.songsQuery()
-    guard let items = query.items else {return []}
-    return getSortedTracks(items)
 }

@@ -12,8 +12,7 @@ class OptionsController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        playlistLabel.text = (Settings.selectedPlaylist == nil) ?
-            "All Music" : Settings.selectedPlaylist!.name
+        playlistLabel.text = Settings.selectedPlaylist.name
         
         let v = Settings.selectedVoice
         voiceLabel.text = "\(v.langName) (\(v.countryName))"

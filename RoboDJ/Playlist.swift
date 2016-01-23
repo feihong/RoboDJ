@@ -39,7 +39,7 @@ struct MediaPlaylist : Playlist {
     }
     
     func getTracks() -> [Track] {
-        return getSortedTracks(item.items)
+        return Media.getSortedTracks(item.items)
     }
     
     static func getPlaylists() -> [Playlist] {
@@ -57,5 +57,18 @@ struct MediaPlaylist : Playlist {
         query.addFilterPredicate(pred)
         guard let collections = query.collections else {return nil}
         return MediaPlaylist(item: collections[0])
+    }
+}
+
+// Pseudo-playlist that can play any music on the device
+struct AllMusicPlaylist : Playlist {
+    var id: UInt64 = 0
+    var name = "All Music"
+    var count = 0
+    
+    func getTracks() -> [Track] {
+        let query = MPMediaQuery.songsQuery()
+        guard let items = query.items else {return []}
+        return Media.getSortedTracks(items)
     }
 }
