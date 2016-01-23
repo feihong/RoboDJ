@@ -36,7 +36,18 @@ struct MediaPlaylist : Playlist {
     
     static func getPlaylists() -> [Playlist] {
         let query = MPMediaQuery.playlistsQuery()
-        guard let result = query.collections else { return [] }        
-        return result.map { MediaPlaylist(item: $0) }
+        guard let collections = query.collections else { return [] }
+        return collections.map { MediaPlaylist(item: $0) }
+    }
+    
+    static func getPlaylist(id: NSNumber) -> Playlist? {
+        let query = MPMediaQuery.playlistsQuery()
+        let pred = MPMediaPropertyPredicate(
+            value: id,
+            forProperty: MPMediaItemPropertyPersistentID,
+            comparisonType: .EqualTo)
+        query.addFilterPredicate(pred)
+        guard let collections = query.collections else {return nil}
+        return MediaPlaylist(item: collections[0])
     }
 }

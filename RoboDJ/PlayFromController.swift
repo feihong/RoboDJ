@@ -10,7 +10,7 @@ class PlayFromController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if Settings.loadStubData {
-            playlists = getStubPlaylists()
+            playlists = Stubs.playlists
         } else {
             playlists = MediaPlaylist.getPlaylists()
         }
@@ -77,13 +77,4 @@ class PlayFromController: UITableViewController {
         }
         navigationController?.popViewControllerAnimated(true)
     }
-}
-
-func getStubPlaylists() -> [Playlist] {
-    return [
-        PlaylistStub(id: 0, name: "Jazz", count: 192),
-        PlaylistStub(id: 1, name: "Rock", count: 180),
-        PlaylistStub(id: 2, name: "Disco", count: 34),
-        PlaylistStub(id: 3, name: "Electro", count: 5),
-    ]
 }

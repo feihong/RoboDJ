@@ -1,12 +1,5 @@
-//
-//  AppDelegate.swift
-//  RoboDJ
-//
-//  Created by Feihong Hsu on 1/21/16.
-//  Copyright © 2016 Feihong Hsu. All rights reserved.
-//
-
 import UIKit
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +8,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        Settings.registerDefaults()
+        Settings.initValues()
         return true
     }
 
