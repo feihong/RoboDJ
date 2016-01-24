@@ -64,7 +64,7 @@ struct Player {
 
 class PlayerNotificationResponder : NSObject {
     func playbackStateChanged(notification: NSNotification) {
-//        print("\(NSDate()): Playback state changed to \(Player.playbackState.rawValue)")
+        print("\(NSDate()): Playback state changed to \(Player.playbackState.rawValue)")
         Player.changedCallback()
     }
     

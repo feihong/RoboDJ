@@ -29,4 +29,19 @@ func setTableViewBelowStatusBar(tableView: UITableView) {
 
 ---
 
-Next: Set up notifications
+Definition of MPMusicPlaybackState enum:
+
+```swift
+enum MPMusicPlaybackState : Int {
+    case Stopped
+    case Playing
+    case Paused
+    case Interrupted
+    case SeekingForward
+    case SeekingBackward
+}
+```
+
+---
+
+Next: Figure out background execution.

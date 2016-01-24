@@ -24,6 +24,7 @@
 		A7FBA6461C5334C000D519FF /* Stubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FBA6451C5334C000D519FF /* Stubs.swift */; };
 		A7FBA6481C533FCD00D519FF /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FBA6471C533FCD00D519FF /* Track.swift */; };
 		A7FBA64A1C553D5300D519FF /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FBA6491C553D5300D519FF /* Player.swift */; };
+		A7FBA64C1C5597A700D519FF /* Talker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FBA64B1C5597A700D519FF /* Talker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		A7FBA6451C5334C000D519FF /* Stubs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stubs.swift; sourceTree = "<group>"; };
 		A7FBA6471C533FCD00D519FF /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		A7FBA6491C553D5300D519FF /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		A7FBA64B1C5597A700D519FF /* Talker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Talker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 				A7FBA6451C5334C000D519FF /* Stubs.swift */,
 				A7FBA6351C51DB4B00D519FF /* Media.swift */,
 				A7FBA6491C553D5300D519FF /* Player.swift */,
+				A7FBA64B1C5597A700D519FF /* Talker.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 			files = (
 				A7FBA6081C51D15900D519FF /* PlayerController.swift in Sources */,
 				A7FBA6481C533FCD00D519FF /* Track.swift in Sources */,
+				A7FBA64C1C5597A700D519FF /* Talker.swift in Sources */,
 				A7FBA6341C51D59000D519FF /* OptionsController.swift in Sources */,
 				A7FBA6061C51D15900D519FF /* AppDelegate.swift in Sources */,
 				A7FBA64A1C553D5300D519FF /* Player.swift in Sources */,

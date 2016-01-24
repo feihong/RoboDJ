@@ -11,7 +11,7 @@ class PlayerController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateUI()       
+        updateUI()
     }
     
     override func viewWillAppear(animated: Bool) {
