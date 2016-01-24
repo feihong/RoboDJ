@@ -11,41 +11,55 @@ class PlayerController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateUI()
+        updateUI()       
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         updateUI()
+        
+        Player.changedCallback = updateUI
     }
     
-    func updateUI() {
+    func updateLabels() {
         if let item = Player.nowPlayingItem {
             titleLabel.text = item.title!
             artistLabel.text = item.artist ?? ""
         }
-        let buttonTitle = (Player.playbackState == .Playing) ? "Pause" : "Play"
-        playPauseButton.setTitle(buttonTitle, forState: .Normal)
+    }
+    
+    func updateButton(buttonTitle: String = "") {
+        let title: String
+        if buttonTitle == "" {
+            title = (Player.playbackState == .Playing) ? "Pause" : "Play"
+        } else {
+            title = buttonTitle
+        }
+        playPauseButton.setTitle(title, forState: .Normal)
+    }
+    
+    func updateUI() {
+        updateLabels()
+        updateButton()
     }
     
     @IBAction func previousTrack(sender: UIButton) {
         Player.previous()
-        updateUI()
     }
     
     @IBAction func nextTrack(sender: UIButton) {
         Player.next()
-        updateUI()
     }
     
     @IBAction func playOrPause(sender: UIButton) {
-        print(Player.playbackState.rawValue)
-        print(Player.nowPlayingItem?.title)
+        // You have to update the button title here because Player.changedCallback
+        // is not invoked when you manually change the playback state.
         if Player.playbackState == .Playing {
             Player.pause()
+            updateButton("Play")
         } else {
             Player.play()
+            updateButton("Pause")
         }
-        updateUI()        
     }
 }

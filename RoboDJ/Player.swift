@@ -6,6 +6,9 @@ private let notificationResponder = PlayerNotificationResponder()
 
 
 struct Player {
+    // Invoked when something related to the player changes.
+    static var changedCallback: (Void -> Void) = { print("Changed") }
+    
     static func previous() {
         player.skipToPreviousItem()
     }
@@ -19,7 +22,7 @@ struct Player {
     }
     
     static func pause() {
-        player.stop()
+        player.pause()
     }
     
     static var nowPlayingItem: MPMediaItem? {
@@ -61,11 +64,13 @@ struct Player {
 
 class PlayerNotificationResponder : NSObject {
     func playbackStateChanged(notification: NSNotification) {
-        print("\(NSDate()): Playback state changed to \(Player.playbackState.rawValue)")
+//        print("\(NSDate()): Playback state changed to \(Player.playbackState.rawValue)")
+        Player.changedCallback()
     }
     
     func nowPlayingItemChanged(notification: NSNotification) {
-        let title = Player.nowPlayingItem?.title ?? "NONE"
-        print("\(NSDate()): Now playing item changed to \(title)")
+//        let title = Player.nowPlayingItem?.title ?? "NONE"
+//        print("\(NSDate()): Now playing item changed to \(title)")
+        Player.changedCallback()
     }
 }
