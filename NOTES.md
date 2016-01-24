@@ -29,4 +29,4 @@ func setTableViewBelowStatusBar(tableView: UITableView) {
 
 ---
 
-Next: Only load stubs when running app in simulator
+Next: Fix the button text

@@ -5,7 +5,10 @@ protocol Playlist {
     var id: UInt64 {get}
     var name: String {get}
     var count: Int {get}
-    func getTracks() -> [Track]
+}
+
+protocol MediaItemCollectionSource {
+    func getMediaItemCollection() -> MPMediaItemCollection
 }
 
 struct PlaylistStub : Playlist {
@@ -18,15 +21,12 @@ struct PlaylistStub : Playlist {
         self.name = name
         self.count = count
     }
-    
-    func getTracks() -> [Track] { return [] }
 }
 
-struct MediaPlaylist : Playlist {
+struct MediaPlaylist : Playlist, MediaItemCollectionSource {
     var item: MPMediaItemCollection
     var id: UInt64 {
-        let number = item.valueForProperty(MPMediaItemPropertyPersistentID) as! NSNumber
-        return number.unsignedLongLongValue
+        return item.persistentID
     }
     var name: String {
         return item.valueForProperty(MPMediaPlaylistPropertyName) as! String
@@ -38,9 +38,10 @@ struct MediaPlaylist : Playlist {
         self.item = item
     }
     
-    func getTracks() -> [Track] {
-        return Media.getSortedTracks(item.items)
+    func getMediaItemCollection() -> MPMediaItemCollection {
+        return MPMediaItemCollection(items: Media.getSortedItems(item.items))
     }
+    
     
     static func getPlaylists() -> [Playlist] {
         let query = MPMediaQuery.playlistsQuery()
@@ -55,20 +56,22 @@ struct MediaPlaylist : Playlist {
             forProperty: MPMediaItemPropertyPersistentID,
             comparisonType: .EqualTo)
         query.addFilterPredicate(pred)
-        guard let collections = query.collections else {return nil}
+        guard let collections = query.collections else { return nil }
         return MediaPlaylist(item: collections[0])
     }
 }
 
 // Pseudo-playlist that can play any music on the device
-struct AllMusicPlaylist : Playlist {
+struct AllMusicPlaylist : Playlist, MediaItemCollectionSource {
     var id: UInt64 = 0
     var name = "All Music"
     var count = 0
     
-    func getTracks() -> [Track] {
+    func getMediaItemCollection() -> MPMediaItemCollection {
         let query = MPMediaQuery.songsQuery()
-        guard let items = query.items else {return []}
-        return Media.getSortedTracks(items)
+        guard let items = query.items else {
+            return MPMediaItemCollection(items: [])
+        }
+        return MPMediaItemCollection(items: Media.getSortedItems(items))
     }
 }

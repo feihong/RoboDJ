@@ -4,17 +4,15 @@ import MediaPlayer
 struct Track {
     var item: MPMediaItem
     var title: String {
-        return item.valueForProperty(MPMediaItemPropertyTitle) as! String
+        return item.title!
     }
     var artist: String {
-        return item.valueForProperty(MPMediaItemPropertyArtist) as! String
+        guard let result = item.artist else {return ""}
+        return result
     }
     var lastPlayedDate: NSDate {
-        if let obj = item.valueForProperty(MPMediaItemPropertyLastPlayedDate) {
-            return obj as! NSDate
-        } else {
-            return NSDate(timeIntervalSince1970: 0)
-        }
+        guard let date = item.lastPlayedDate else { return NSDate(timeIntervalSince1970: 0) }
+        return date
     }
     
     init(item: MPMediaItem) {
