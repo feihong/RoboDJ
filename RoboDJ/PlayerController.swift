@@ -2,7 +2,6 @@ import UIKit
 import MediaPlayer
 
 
-private let player = MPMusicPlayerController.applicationMusicPlayer()
 
 
 class PlayerController: UIViewController {
@@ -12,33 +11,41 @@ class PlayerController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateLabels()
+        updateUI()
     }
     
-    func updateLabels() {
-        if let item = player.nowPlayingItem {
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        updateUI()
+    }
+    
+    func updateUI() {
+        if let item = Player.nowPlayingItem {
             titleLabel.text = item.title!
             artistLabel.text = item.artist ?? ""
         }
+        let buttonTitle = (Player.playbackState == .Playing) ? "Pause" : "Play"
+        playPauseButton.setTitle(buttonTitle, forState: .Normal)
     }
     
     @IBAction func previousTrack(sender: UIButton) {
-        player.skipToPreviousItem()
-        updateLabels()
+        Player.previous()
+        updateUI()
     }
     
     @IBAction func nextTrack(sender: UIButton) {
-        player.skipToNextItem()
-        updateLabels()
+        Player.next()
+        updateUI()
     }
     
     @IBAction func playOrPause(sender: UIButton) {
-        if let playlist = Settings.selectedPlaylist as? MediaItemCollectionSource {
-            player.stop()
-            player.setQueueWithItemCollection(playlist.getMediaItemCollection())
-            player.shuffleMode = .Off
-            player.play()
-            updateLabels()
+        print(Player.playbackState.rawValue)
+        print(Player.nowPlayingItem?.title)
+        if Player.playbackState == .Playing {
+            Player.pause()
+        } else {
+            Player.play()
         }
+        updateUI()        
     }
 }

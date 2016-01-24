@@ -29,4 +29,4 @@ func setTableViewBelowStatusBar(tableView: UITableView) {
 
 ---
 
-Next: Fix the button text
+Next: Set up notifications

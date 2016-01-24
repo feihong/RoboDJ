@@ -17,7 +17,9 @@ struct Media {
                 return a.lastPlayedDate!.compare(b.lastPlayedDate!) == NSComparisonResult.OrderedAscending
             }
         }
-        // Only return the first 50 items.
+        // Only return the first 100 items.
         return (result.count > 50) ? Array(result[0..<50]) : result
     }
+    
+    
 }
