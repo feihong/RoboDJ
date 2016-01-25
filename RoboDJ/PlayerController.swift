@@ -10,17 +10,17 @@ class PlayerController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UIApplication.sharedApplication().idleTimerDisabled = true
 //        if let playlist = Settings.selectedPlaylist as? MediaItemCollectionSource {
 //            Player.loadMediaItemCollection(playlist.getMediaItemCollection())
 //        }
+        Player.changedCallback = updateUI
         updateUI()
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         updateUI()
-        
-        Player.changedCallback = updateUI
     }
     
     func updateLabels() {

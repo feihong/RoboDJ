@@ -44,12 +44,14 @@ enum MPMusicPlaybackState : Int {
 
 ---
 
-I can [turn on Background mode](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html#//apple_ref/doc/uid/TP40007072-CH4-SW23) to keep the app running even after the screen locks. However, doing so still does not allow my app to receive playback state notifications when it's running in the background.
+I can [turn on Background mode](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html#//apple_ref/doc/uid/TP40007072-CH4-SW23) to keep the app running even after the screen locks. However, doing so still does not allow my app to receive playback state notifications until the app has been unlocked (which is too late to do anything interesting).
 
 ---
 
 I can [set idleTimerDisabled to true] to prevent the screen from locking altogether while my app is running. This is probably the way to go.
 
+I should be able to use applicationMusicPlayer and load one media item at a time. I listen for the playback state being set to Stopped, speak, then fill the queue with another song.
+
 ---
 
-Next: Figure out background execution.
+Next: Take a look at AVAudioPlayer notifications/callbacks.

@@ -1,8 +1,8 @@
 import MediaPlayer
 
 
-private let player = MPMusicPlayerController.systemMusicPlayer()
-//private let player = MPMusicPlayerController.applicationMusicPlayer()
+//private let player = MPMusicPlayerController.systemMusicPlayer()
+private let player = MPMusicPlayerController.applicationMusicPlayer()
 private let notificationResponder = PlayerNotificationResponder()
 
 
