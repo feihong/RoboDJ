@@ -3,7 +3,6 @@ import MediaPlayer
 
 
 
-
 class PlayerController: UIViewController {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var artistLabel: UILabel!
@@ -11,6 +10,9 @@ class PlayerController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        if let playlist = Settings.selectedPlaylist as? MediaItemCollectionSource {
+//            Player.loadMediaItemCollection(playlist.getMediaItemCollection())
+//        }
         updateUI()
     }
     

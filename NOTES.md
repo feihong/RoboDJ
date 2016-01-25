@@ -44,4 +44,12 @@ enum MPMusicPlaybackState : Int {
 
 ---
 
+I can [turn on Background mode](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html#//apple_ref/doc/uid/TP40007072-CH4-SW23) to keep the app running even after the screen locks. However, doing so still does not allow my app to receive playback state notifications when it's running in the background.
+
+---
+
+I can [set idleTimerDisabled to true] to prevent the screen from locking altogether while my app is running. This is probably the way to go.
+
+---
+
 Next: Figure out background execution.
