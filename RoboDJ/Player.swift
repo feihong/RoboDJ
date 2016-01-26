@@ -47,7 +47,7 @@ struct Player {
         NSNotificationCenter.defaultCenter().addObserver(
             notificationResponder,
             selector: "playbackStateChanged:",
-            name: MPMusicPlayerControllerNowPlayingItemDidChangeNotification,
+            name: MPMusicPlayerControllerPlaybackStateDidChangeNotification,
             object: player)
         
         NSNotificationCenter.defaultCenter().addObserver(
